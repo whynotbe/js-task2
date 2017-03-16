@@ -4,8 +4,12 @@
 window.onload = getNumber;
 
 function getNumber(){
-    var number = document.getElementById("input")
+    var number = document.getElementById("input");
     var num ;
+    var tri=document.getElementsByClassName("tri");
+    tri[0].onclick=function(){
+        window.location.href = "main.html";
+    }
     number.onblur=function(){
         num = number.value;
         if(parseInt(num) == num){
