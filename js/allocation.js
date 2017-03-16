@@ -15,7 +15,15 @@ function getNumber(){
         if(parseInt(num) == num){
             if(num>3&&num<19)
             {
-                allocate(num);
+                var k = allocate(num);
+                var players = [];
+                for(var p = 1;p <=num ;p++){
+                    players.push(p);
+                }
+                alert(players.length);
+                var killers = shuffle(k,players);
+                
+
             }
             else{
                 alert("请输入4~18的整数!");
@@ -38,6 +46,17 @@ function allocate(a){
     var civil = "平民" +civilNum + "人";
     killerNumber.innerHTML = killer;
     civilNumber.innerHTML = civil;
+    return killerNum;
 }
 
-
+function    shuffle(x,array){
+    
+    var c = [];
+    for(i = 0 ;i < x ; i++){
+        var order = Math.floor(Math.random()*(array.length));
+        var a = array.splice(order,1);
+        c.push(a);
+    }
+    return c;
+    
+}
