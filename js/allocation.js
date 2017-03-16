@@ -8,7 +8,7 @@ function getNumber(){
     var num ;
     var tri=document.getElementsByClassName("tri");
     tri[0].onclick=function(){
-        window.location.href = "main.html";
+        window.location.href = "index-js.html";
     }
     number.onblur=function(){
         num = number.value;
